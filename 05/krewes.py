@@ -1,3 +1,9 @@
+'''
+Madelyn Mao
+SoftDev
+K05 -- Teamwork, but Better This Time
+2020-09-25
+'''
 import random
 def pick():
     KREWES = {'orpheus': ['ERIC', 'SAUVE', 'JONATHAN', 'PAK', 'LIAM', 'WINNIE', 'KELLY', 'JEFFREY', 'KARL', 'ISHITA',
