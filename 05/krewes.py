@@ -1,9 +1,13 @@
 '''
-Madelyn Mao
+Team Poseidon
+Roster: Madelyn Mao, Ethan Machleder, Mary Shang
 SoftDev
 K05 -- Teamwork, but Better This Time
-2020-09-25
+2020-09-27
 '''
+
+#Write a program that will print the name of a randomly-selected student from team (orpheus, rex, or endymion).
+
 import random
 def pick():
     KREWES = {'orpheus': ['ERIC', 'SAUVE', 'JONATHAN', 'PAK', 'LIAM', 'WINNIE', 'KELLY', 'JEFFREY', 'KARL', 'ISHITA',
@@ -24,3 +28,10 @@ def pick():
     print(KREWES[teams[r]][pos])
 
 pick()
+
+'''
+We all agreed that the question is asking to randomly choose a student from a random team. So we created a list
+containing the three keys in KREWES and randomly picked a team's position. Then we randomly picked a student's
+position in that team. When we print KREWES[teams[r]][pos], it randomly chooses a key/team in KREWES, and prints
+one of its values/students at random.
+'''
