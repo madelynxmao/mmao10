@@ -7,18 +7,18 @@ $ python3 -m venv ~/myherozero
 
 What it does:
 When we ran this command in terminal, there appeared a new directory called myherozero. Upon entering this directory and listing it’s items, we saw 4 more items:
-Madelyn’s contained
+Madelyn’s contained- 
 Bin (directory)
-Contained a lot of activate files with extensions (.ps1,.csh,.fish)
-pip(S)
-Python versions
-Easy_install(s)
+	Contained a lot of activate files with extensions (.ps1,.csh,.fish)
+	pip(S)
+	Python versions
+	Easy_install(s)
 Include (directory)
-empty
+	empty
 Lib (directory)
-Contained python3.8
+	Contained python3.8
 Pyvenv.cfg(not a directory)
-When I nano-ed into Pyvenv.cfg, I saw three lines, of which stated my python version.
+	When I nano-ed into Pyvenv.cfg, I saw three lines, of which stated my python version.
 
 What we know from python manual: 
        -m module-name
