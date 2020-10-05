@@ -1,0 +1,18 @@
+Team PinkElk (Madelyn Mao, Matthew Hui, Pak Ming Lau)
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity 
+2020-10-02
+
+Madelyn’s comments:
+I found the line reader = csv.reader(csv_file, delimiter=',') from group TLK interesting. Since there were multiple commas in some of the rows, my group used .rsplit to split each line with the last ‘,’. It appears that the multiple commas in some rows of the occupations file did not interfere with their results.
+From other groups that didn’t use the csv library or know about random choice, I noticed a lot of complicated for loops. Some groups could have used more descriptive variable names.
+
+Matthew’s comments:
+I didn’t know that rsplit was a thing and found it cool that it read a string from right to left. (Team AMA-Zing) I also didn’t know the DictReader(file) method was a thing and found it really interesting that it mapped a csv file to a dictionary. (Team Ethan & Dean) 
+I also noticed that some teams had long & complicated methods of weighting a random selection because they either didn’t use or know of the choices method. 
+
+Pak’s comments:
+with open as, very efficient way of opening and reading a file (Team TLK)
+Didn’t know the csv library existed, but it allowed for a dictionary of occupations to be created much quicker and in fewer lines (Team TLK)
+choices() is also much more efficient than a random number generator and ranges (Team TLK)
+
