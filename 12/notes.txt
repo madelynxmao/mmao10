@@ -1,0 +1,20 @@
+Team PinkElk (Madelyn Mao, Matthew Hui, Pak Ming Lau)
+SoftDev
+K11 -- Some Things Never Change
+2020-10-13
+
+#Q0: What happens if you remove render_template from this line?
+If we remove render_template, we can still run http://127.0.0.1:5000/, but not http://127.0.0.1:5000/my_foist_template
+
+#Q1: Can all of your teammates confidently predict the URL to use to load this page?
+http://127.0.0.1:5000/my_foist_template
+
+#Q2: What is the significance of each argument?
+
+return render_template( 'model_tmplt.html', foo="fooooo", collection=coll)
+
+'model_tmplt.html' is a html file. The title of the webpage is assigned to foo. The body of the html states for each item in collection, print the item, next line. {% endfor %} signals to loop.
+
+We set foo="fooooo" which results in the webpage being named “fooooo”
+We set collection=coll, a list defined in app.py as [0,1,1,2,3,5,8]. 
+

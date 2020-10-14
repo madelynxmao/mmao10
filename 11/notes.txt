@@ -1,0 +1,15 @@
+Team PinkElk (Madelyn Mao, Matthew Hui, Pak Ming Lau)
+SoftDev
+K11 -- Some Things Never Change
+2020-10-13
+
+Predicted that http://localhost:5000/static/foo would produce the same results as running  http://localhost:5000/static/foo.html
+
+During the initial run of app.py, 
+the __name__ of this module is... 
+__main__
+is printed in the terminal and No hablo queso! is printed on the web.
+
+Running http://localhost:5000/static/foo generates a download of foo.
+Running  http://localhost:5000/static/foo.html results in a webpage with “this here some plaintext tho” written.
+
