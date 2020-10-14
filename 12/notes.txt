@@ -15,6 +15,10 @@ return render_template( 'model_tmplt.html', foo="fooooo", collection=coll)
 
 'model_tmplt.html' is a html file. The title of the webpage is assigned to foo. The body of the html states for each item in collection, print the item, next line. {% endfor %} signals to loop.
 
+Question: Why is it “model_tmplt.html” instead of “templates/model_tmplt.html” since app.py and model_tmplt.html aren’t on the same level of the directory? Is the templates folder the folder render_template looks for files?
+
 We set foo="fooooo" which results in the webpage being named “fooooo”
 We set collection=coll, a list defined in app.py as [0,1,1,2,3,5,8]. 
+
+The web page printed each number in the list (going in order of index), each on a new line.
 
