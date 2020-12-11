@@ -1,0 +1,7 @@
+Team Sharp Cat - Victoria Gao, Alvin Wu, Jonathan Lee, Madelyn Mao
+SoftDev
+K14 -- Form and Function
+2020-12-09
+-To access the values entered by a user for an argument, use request.args[<argument>]
+To display the username entered by the user, we put request.args["username"] in the body of the response.html file.
+-To display the request method used, we put request.method in the body of the response.html file.
