@@ -3,10 +3,44 @@ SoftDev
 K15: Sessions Greetings
 2020-12-10
 
--To create a session, one must first import session from flask 
--Using sessions requires a secret key
--Logging out pops the username to remove it, and the index page checks to see if the username is in the session
-
-Test Cases we checked:
--if any of the username or password field is empty or both empty
--if any of the username or password filed or both are incorrect
+-The login page checks to see if the username is in the session object to determine if a user is logged in. 
+-To create a session, one must first import session from flask.  Session is a flask module that facilitates "remembering"
+users from one request to the next.  Flask session data is maintained by the server but stored in the cookies on the client.
+-Flask session object works like a dictionary.
+Ex: session["username"] allows us to access the username we hardcoded.
+-Private keys are used to encrypt the session, which ensures data privacy.
+We generated a randomized string of 24 bits with os.urandom(24) and assigned it as built-in secret_key:
+app.secret_key = <randomly_generated_string>  
+-To log out, we removed the username data from session with session.pop('username',None).  
+-Test Cases we checked:
+  	-if any of the username or password fields are empty or both empty
+	-if any of the username or password fields or both are incorrect
+-print("*** DIAG: request.args['username'] ***") prints a diagnostic print statement ("*** DIAG: request.args['username'] ***") in terminal.
+-print(request.args['username']) prints the inputted username in terminal.
+-print(request.headers) prints information about the client's request in terminal:
+	-Host: domain name of the server
+	-User-Agent: the browser
+	-Accept: the content types that the client can process (Ex: text/html, application/xml)
+	-Referer: URL of the resource that the request comes from (Ex: http://127.0.0.1:5000/)
+	-Accept-Encoding: the compressed formats that the client supports (Ex: gzip)
+	-Accept-Language: requested language version (Ex: en-US)
+-We navigated to the Chrome browser's developer console -> network tab -> Cookies section.
+After a user logs in successfully, we saw a row of data get added to the response cookies table.
+The response cookies table consisted of 10 columns:
+	-Name: the cookie's name (Ex: session)
+	-Value: the cookie's value 
+	-Domain: the hosts that are allowed to receive the cookie (Ex: 127.0.0.1)
+	-Path: the URL that must exist in the requested URL in order to send the Cookie header (Ex: /)
+	-Expires / Max-Age: Session: the cookie's expiration date or maximum age.  For session cookies, this value is always Session.
+	-Size: the cookie's size, in bytes
+	-Http: if this field's value is true, the cookie should only be used over HTTP connections.
+	-Secure: if this field's value is true, the cookie can only be sent to the server over a secure, HTTPS connection
+	-SameSite: determines whether/when cookies are sent with requests created outside the domain from which the first resource was served, 
+	can take three values: Strict (cookie is sent only to the same site as the one that created it), 
+	Lax (cookies are sent when the user navigates to the cookie's origin site, ex: clicking a link),
+	None (cookies are sent on both originating and cross-site requests, but only when the cookie's Secure attribute is true.
+	If the SameSite attribute is not set to a value, the cookie takes the default SameSite value of Lax.
+	-Priority: medium (default)
+-When we logged in successfully, the cookie's value is a randomly generated string, "Expires / Max-Age" is Session, Http is true, and  
+SameSite is not specified.
+-When we logged out, the cookie's value is an empty string, "Expires / Max-Age" is 0, Http is false, and SameSite is not specified.
