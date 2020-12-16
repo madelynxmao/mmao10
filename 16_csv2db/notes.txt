@@ -2,8 +2,21 @@
 #SoftDev 
 #K16 -- No Trouble
 #2020-12-14
-
--"CREATE TABLE IF NOT EXISTS" is pretty straightforward, used to prevent duplicates if you run the script more than once without deleting the db. 
--New thing called parameters, you put the variables you want to insert into the tuple and place it at the end of the insert command 
--The question marks in the values are placeholders for values that will be binded later, in this case they are binded in the params variable.
 -csv.DictReader() reads in the csv file and stores its values in a dictionary 
+-Parameters: variables you want to insert into the tuple.  Parameters are placed it in the second argument of the insert command 
+For example, the parameters of a table called courses are Code, Mark, ID.
+params = (Code, Mark, ID)
+The insert command for this table is 'INSERT INTO courses(Code,Mark,ID) VALUES(?,?,?)', params)
+-The question marks inside the parentheses of VALUES() are placeholders for values that will be inserted later, in this case they are binded in the params variable.
+-"CREATE TABLE IF NOT EXISTS" prevents the creation of tables with the same name as the tables in an existing .db file that data is stored in.
+If you run the Python script more than once without deleting the .db file called DB_FILE in the sqlite3.connect(DB_FILE) command, a new .db file won't 
+be created every time you run the Python script.
+-To view the contents of a .db file, 
+1. In the terminal: $sqlite3 <db_filename>
+2. .tables allows you to view the names of the tables.
+For this assignment, ".tables" outputs "courses	  students"
+3. SELECT * FROM <table_name>;
+Ex: SELECT * FROM courses shows all of the columns names and rows of data in the courses table
+4. SELECT <column_name> FROM <table_name> shows the data in a column of the table.
+Ex: SELECT Code FROM courses shows data in the Code column of the courses table.
+The Code column contains the names of the class each student is taking.
