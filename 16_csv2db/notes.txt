@@ -1,0 +1,9 @@
+#Team SharpCat (Alvin Wu, Madelyn Mao, Jonathan Lee, Victoria Gao)
+#SoftDev 
+#K16 -- No Trouble
+#2020-12-14
+
+-"CREATE TABLE IF NOT EXISTS" is pretty straightforward, used to prevent duplicates if you run the script more than once without deleting the db. 
+-New thing called parameters, you put the variables you want to insert into the tuple and place it at the end of the insert command 
+-The question marks in the values are placeholders for values that will be binded later, in this case they are binded in the params variable.
+-csv.DictReader() reads in the csv file and stores its values in a dictionary 
