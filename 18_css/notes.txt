@@ -1,0 +1,21 @@
+Team Hold (Winnie Huang, Madelyn Mao)
+SoftDev
+K18 -- Filler and Finery
+2021-01-14
+
+Lorem ipsum from https://loremipsum.io
+inline: <body/p/section style = "prop: value; prop: value;"></body/p/section>
+
+internal:
+body/p/section{
+    prop: value;
+    prop: value;
+}
+
+external: 
+<body/p/section id = "x"></body/p/section>
+
+in main.css:
+#x{
+    prop: value;
+}
