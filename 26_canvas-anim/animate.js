@@ -19,8 +19,8 @@ var requestID;  //init global var for use with animation frames
 
 
 //var clear = function(e) {
-function clear() {
-  console.log("clear invoked...");
+var clear = (e) => {
+  e.preventDefault();
   ctx.clearRect(0,0,500,500);
 }
 
