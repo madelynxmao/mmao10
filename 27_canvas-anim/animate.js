@@ -73,8 +73,8 @@ var stopIt = () => {
   window.cancelAnimationFrame(requestID); // stops it 
 };
 
-var dvdxmov = .5;
-var dvdymov = 1;
+var dvdxmov = 1;
+var dvdymov = .5;
 var dvdxpos = 1;
 var dvdypos = 1;
 var logo = new Image();
