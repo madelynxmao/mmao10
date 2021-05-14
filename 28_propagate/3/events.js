@@ -20,7 +20,17 @@ for (x=0; x < trs.length; x++) {
   trs[x].addEventListener('click', clicky);
 }
 
+//Predict, then test...
+//Q: What effect does the boolean arg have?
+//   (Leave exactly 1 version uncommented to test...)
+
 table.addEventListener('click', clicky, true);
+//table.addEventListener('click', clicky);
+//does 2,3,1
+
+// A: When arg is false, bubbling occurs, which means all events fired up starting from the most nested element to the least nested element.
+//    When arg is true, capturing occurs, which means all events are fired up starting from the least nested element to the most nested element.
+
 
 // Q: When user clicks on a cell, in what order will the pop-ups appear?
 // 1. names of all items in each row
