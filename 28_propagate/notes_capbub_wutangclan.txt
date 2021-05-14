@@ -1,0 +1,19 @@
+// Team two-do (Jonathan Lee, Madelyn Mao)
+// SoftDev pd1
+// K28 -- Bubble Bubble Toil Trouble
+// 2021-05-13
+
+1.
+    Prediction: On click, popup with text of that cell
+    What Happened: Yep.
+2.
+    Prediction: On click, popup with text of the cell, the row, and then the table
+    What Happened: Mostly as expected, but with html tags included for the latter two.
+3.
+    Prediction: Same as 2
+    What Happened: The table was alerted before the other two, which were in the prev order.
+    Hmm: The addition of "true" to table.addEventListener
+4.
+    Prediction: Same as 2, really this time
+    What Happened: Reverse of 2
+    Hmm: Order on code doesn't matter for these. What matters is the boolean after click. By setting boolean to true, we make sure the pop ups begin at the least nested element
