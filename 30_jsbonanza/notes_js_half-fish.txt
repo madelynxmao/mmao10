@@ -1,0 +1,7 @@
+Team Half Fish :: Madelyn Mao, Benjamin Gallai, Andrew Jiang
+SoftDev pd1
+K30 -- canvas based JS animation
+2021-05-18t
+
+This project utilizes the quadraticCurveTo feature of canvas to draw the parabolas in the McDonald's logo, and the circle feature to create the fading effect seen in ads.
+We used cosine and sine to indicate the exact portion of the circle we wanted drawn. 
